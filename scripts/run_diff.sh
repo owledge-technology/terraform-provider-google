@@ -21,7 +21,7 @@ if [[ -d ~/go/src/github.com/hashicorp/terraform-provider-clean-google ]]; then
   popd
 else
   mkdir -p ~/go/src/github.com/hashicorp
-  git clone https://github.com/hashicorp/terraform-provider-google ~/go/src/github.com/hashicorp/terraform-provider-clean-google
+  git clone https://github.com/owledge-technology/terraform-provider-google ~/go/src/github.com/hashicorp/terraform-provider-clean-google
 fi
 
 

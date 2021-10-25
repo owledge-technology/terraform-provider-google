@@ -10,7 +10,7 @@ import (
 )
 
 // Tags tests cannot be run in parallel without running into Error Code 10: ABORTED
-// See https://github.com/hashicorp/terraform-provider-google/issues/8637
+// See https://github.com/owledge-technology/terraform-provider-google/issues/8637
 
 func TestAccTags(t *testing.T) {
 	testCases := map[string]func(t *testing.T){

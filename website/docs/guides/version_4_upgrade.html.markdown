@@ -81,8 +81,8 @@ Most of the changes outlined in this guide have been previously marked as
 deprecated in the Terraform `plan`/`apply` output throughout previous provider
 releases, up to and including the final `3.X` series release. These changes,
 such as deprecation notices, can always be found in the CHANGELOG of the
-affected providers. [google](https://github.com/hashicorp/terraform-provider-google/blob/master/CHANGELOG.md)
-[google-beta](https://github.com/hashicorp/terraform-provider-google-beta/blob/master/CHANGELOG.md)
+affected providers. [google](https://github.com/owledge-technology/terraform-provider-google/blob/master/CHANGELOG.md)
+[google-beta](https://github.com/owledge-technology/terraform-provider-google-beta/blob/master/CHANGELOG.md)
 
 ## I accidentally upgraded to 4.0.0, how do I downgrade to `3.X`?
 
@@ -174,7 +174,7 @@ After this change the following scopes are enabled, in line with `gcloud`'s
 * "https://www.googleapis.com/auth/userinfo.email"
 
 This change is believed to have no user impact. If you find that Terraform
-behaves incorrectly as a result of this change, please report a [bug](https://github.com/hashicorp/terraform-provider-google/issues/new?assignees=&labels=bug&template=bug.md).
+behaves incorrectly as a result of this change, please report a [bug](https://github.com/owledge-technology/terraform-provider-google/issues/new?assignees=&labels=bug&template=bug.md).
 
 ### Runtime Configurator (`runtimeconfig`) resources have been removed from the GA provider
 

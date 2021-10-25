@@ -118,7 +118,7 @@ func TestAccPubsubSubscription_push(t *testing.T) {
 	})
 }
 
-// Context: hashicorp/terraform-provider-google#4993
+// Context: owledge-technology/terraform-provider-google#4993
 // This test makes a call to GET an subscription before it is actually created.
 // The PubSub API negative-caches responses so this tests we are
 // correctly polling for existence post-creation.

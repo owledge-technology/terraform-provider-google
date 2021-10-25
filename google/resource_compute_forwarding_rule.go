@@ -9,7 +9,7 @@
 //     Changes will need to be made to the DCL or Magic Modules instead of here.
 //
 //     We are not currently able to accept contributions to this file. If changes
-//     are required, please file an issue at https://github.com/hashicorp/terraform-provider-google/issues/new/choose
+//     are required, please file an issue at https://github.com/owledge-technology/terraform-provider-google/issues/new/choose
 //
 // ----------------------------------------------------------------------------
 

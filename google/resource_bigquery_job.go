@@ -1360,7 +1360,7 @@ func flattenBigQueryJobConfigurationQuerySchemaUpdateOptions(v interface{}, d *s
 }
 
 // KmsKeyName switched from using a key name to a key version, this will separate the key name from the key version and save them
-// separately in state.  https://github.com/hashicorp/terraform-provider-google/issues/9208
+// separately in state.  https://github.com/owledge-technology/terraform-provider-google/issues/9208
 func flattenBigQueryJobConfigurationQueryDestinationEncryptionConfiguration(v interface{}, d *schema.ResourceData, config *Config) interface{} {
 	if v == nil {
 		return []map[string]interface{}{}
@@ -1602,7 +1602,7 @@ func flattenBigQueryJobConfigurationLoadTimePartitioningField(v interface{}, d *
 }
 
 // KmsKeyName switched from using a key name to a key version, this will separate the key name from the key version and save them
-// separately in state.  https://github.com/hashicorp/terraform-provider-google/issues/9208
+// separately in state.  https://github.com/owledge-technology/terraform-provider-google/issues/9208
 func flattenBigQueryJobConfigurationLoadDestinationEncryptionConfiguration(v interface{}, d *schema.ResourceData, config *Config) interface{} {
 	if v == nil {
 		return []map[string]interface{}{}
@@ -1704,7 +1704,7 @@ func flattenBigQueryJobConfigurationCopyWriteDisposition(v interface{}, d *schem
 }
 
 // KmsKeyName switched from using a key name to a key version, this will separate the key name from the key version and save them
-// separately in state.  https://github.com/hashicorp/terraform-provider-google/issues/9208
+// separately in state.  https://github.com/owledge-technology/terraform-provider-google/issues/9208
 func flattenBigQueryJobConfigurationCopyDestinationEncryptionConfiguration(v interface{}, d *schema.ResourceData, config *Config) interface{} {
 	if v == nil {
 		return []map[string]interface{}{}

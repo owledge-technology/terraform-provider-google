@@ -173,7 +173,7 @@ func bigQueryTableSchemaDiffSuppress(name, old, new string, _ *schema.ResourceDa
 }
 
 func bigQueryTableTypeEq(old, new string) bool {
-	// Do case-insensitive comparison. https://github.com/hashicorp/terraform-provider-google/issues/9472
+	// Do case-insensitive comparison. https://github.com/owledge-technology/terraform-provider-google/issues/9472
 	oldUpper := strings.ToUpper(old)
 	newUpper := strings.ToUpper(new)
 
@@ -192,7 +192,7 @@ func bigQueryTableNormalizeMode(mode interface{}) string {
 	if mode == nil {
 		return "NULLABLE"
 	}
-	// Upper-case to get case-insensitive comparisons. https://github.com/hashicorp/terraform-provider-google/issues/9472
+	// Upper-case to get case-insensitive comparisons. https://github.com/owledge-technology/terraform-provider-google/issues/9472
 	return strings.ToUpper(mode.(string))
 }
 

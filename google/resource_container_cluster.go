@@ -1106,7 +1106,7 @@ func resourceContainerCluster() *schema.Resource {
 // previous syntax requires that schema.SchemaConfigModeAttr is set on the field it is advisable that
 // we have a work around for removing guest accelerators. Also Terraform 0.11 cannot use dynamic blocks
 // so this isn't a solution for module authors who want to dynamically omit guest accelerators
-// See https://github.com/hashicorp/terraform-provider-google/issues/3786
+// See https://github.com/owledge-technology/terraform-provider-google/issues/3786
 func resourceNodeConfigEmptyGuestAccelerator(_ context.Context, diff *schema.ResourceDiff, meta interface{}) error {
 	old, new := diff.GetChange("node_config.0.guest_accelerator")
 	oList := old.([]interface{})
@@ -3593,7 +3593,7 @@ func containerClusterPrivateClusterConfigCustomDiff(_ context.Context, d *schema
 
 		// We can only apply this validation if we know the final value of the field, and we may
 		// not know the final value if users feed the value into their config in unintuitive ways.
-		// https://github.com/hashicorp/terraform-provider-google/issues/4186
+		// https://github.com/owledge-technology/terraform-provider-google/issues/4186
 		blockValueKnown := d.NewValueKnown("private_cluster_config.0.master_ipv4_cidr_block")
 
 		if blockValueKnown && (block == nil || block == "") {

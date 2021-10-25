@@ -13,10 +13,10 @@ var testResourcePrefixes = []string{
 	"tf-test",
 	"tfgen",
 	"gke-us-central1-tf",  // composer-created disks which are abandoned by design (https://cloud.google.com/composer/pricing)
-	"gcs-bucket-tf-test-", // https://github.com/hashicorp/terraform-provider-google/issues/8909
-	"df-",                 // https://github.com/hashicorp/terraform-provider-google/issues/8909
-	"resourcegroup-",      // https://github.com/hashicorp/terraform-provider-google/issues/8924
-	"cluster-",            // https://github.com/hashicorp/terraform-provider-google/issues/8924
+	"gcs-bucket-tf-test-", // https://github.com/owledge-technology/terraform-provider-google/issues/8909
+	"df-",                 // https://github.com/owledge-technology/terraform-provider-google/issues/8909
+	"resourcegroup-",      // https://github.com/owledge-technology/terraform-provider-google/issues/8924
+	"cluster-",            // https://github.com/owledge-technology/terraform-provider-google/issues/8924
 	"k8s-fw-",             // firewall rules are getting created and not cleaned up by k8 resources using this prefix
 }
 

@@ -1,4 +1,4 @@
-TEST?=$$(go list ./... | grep -v github.com/hashicorp/terraform-provider-google/scripts)
+TEST?=$$(go list ./... | grep -v github.com/owledge-technology/terraform-provider-google/scripts)
 WEBSITE_REPO=github.com/hashicorp/terraform-website
 PKG_NAME=google
 
@@ -11,7 +11,7 @@ test: fmtcheck generate
 	go test $(TESTARGS) -timeout=30s $(TEST)
 
 testacc: fmtcheck generate
-	TF_ACC=1 TF_SCHEMA_PANIC_ON_ERROR=1 go test $(TEST) -v $(TESTARGS) -timeout 240m -ldflags="-X=github.com/hashicorp/terraform-provider-google/version.ProviderVersion=acc"
+	TF_ACC=1 TF_SCHEMA_PANIC_ON_ERROR=1 go test $(TEST) -v $(TESTARGS) -timeout 240m -ldflags="-X=github.com/owledge-technology/terraform-provider-google/version.ProviderVersion=acc"
 
 fmt:
 	@echo "==> Fixing source code with gofmt..."

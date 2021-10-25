@@ -60,7 +60,7 @@ func resourceLoggingExclusionCreate(newUpdaterFunc newResourceLoggingExclusionUp
 		id, exclusion := expandResourceLoggingExclusion(d, updater.GetResourceType(), updater.GetResourceId())
 
 		// Logging exclusions don't seem to be able to be mutated in parallel, see
-		// https://github.com/hashicorp/terraform-provider-google/issues/4796
+		// https://github.com/owledge-technology/terraform-provider-google/issues/4796
 		mutexKV.Lock(id.parent())
 		defer mutexKV.Unlock(id.parent())
 
@@ -115,7 +115,7 @@ func resourceLoggingExclusionUpdate(newUpdaterFunc newResourceLoggingExclusionUp
 		exclusion, updateMask := expandResourceLoggingExclusionForUpdate(d)
 
 		// Logging exclusions don't seem to be able to be mutated in parallel, see
-		// https://github.com/hashicorp/terraform-provider-google/issues/4796
+		// https://github.com/owledge-technology/terraform-provider-google/issues/4796
 		mutexKV.Lock(id.parent())
 		defer mutexKV.Unlock(id.parent())
 
@@ -138,7 +138,7 @@ func resourceLoggingExclusionDelete(newUpdaterFunc newResourceLoggingExclusionUp
 
 		id, _ := expandResourceLoggingExclusion(d, updater.GetResourceType(), updater.GetResourceId())
 		// Logging exclusions don't seem to be able to be mutated in parallel, see
-		// https://github.com/hashicorp/terraform-provider-google/issues/4796
+		// https://github.com/owledge-technology/terraform-provider-google/issues/4796
 		mutexKV.Lock(id.parent())
 		defer mutexKV.Unlock(id.parent())
 

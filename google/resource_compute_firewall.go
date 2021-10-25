@@ -77,7 +77,7 @@ func resourceComputeFirewallEnableLoggingCustomizeDiff(_ context.Context, diff *
 	return nil
 }
 
-// Per https://github.com/hashicorp/terraform-provider-google/issues/2924
+// Per https://github.com/owledge-technology/terraform-provider-google/issues/2924
 // Make one of the source_ parameters Required in ingress google_compute_firewall
 func resourceComputeFirewallSourceFieldsCustomizeDiff(_ context.Context, diff *schema.ResourceDiff, v interface{}) error {
 	direction := diff.Get("direction").(string)

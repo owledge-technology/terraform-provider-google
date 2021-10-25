@@ -805,7 +805,7 @@ func resourceSqlDatabaseInstanceCreate(d *schema.ResourceData, meta interface{})
 		return fmt.Errorf("Error setting name: %s", err)
 	}
 
-	// SQL Instances that fail to create are expensive- see https://github.com/hashicorp/terraform-provider-google/issues/7154
+	// SQL Instances that fail to create are expensive- see https://github.com/owledge-technology/terraform-provider-google/issues/7154
 	// We can fail fast to stop instance names from getting reserved.
 	network := d.Get("settings.0.ip_configuration.0.private_network").(string)
 	if network != "" {

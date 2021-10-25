@@ -1,4 +1,4 @@
-module github.com/hashicorp/terraform-provider-google
+module github.com/owledge-technology/terraform-provider-google
 require (
 	cloud.google.com/go/bigtable v1.10.1
 	github.com/GoogleCloudPlatform/declarative-resource-client-library v0.0.0-20210929201636-4f607239a42a

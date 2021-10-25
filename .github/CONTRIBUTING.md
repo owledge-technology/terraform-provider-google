@@ -6,17 +6,17 @@ The following are certain Google Provider-specific things to be aware of when co
 
 ## Go
 
-See the [.go-version](https://github.com/hashicorp/terraform-provider-google/blob/master/.go-version) file for which version of Go to use while developing the provider. You can manage it automatically using [`goenv`](https://github.com/syndbg/goenv).
+See the [.go-version](https://github.com/owledge-technology/terraform-provider-google/blob/master/.go-version) file for which version of Go to use while developing the provider. You can manage it automatically using [`goenv`](https://github.com/syndbg/goenv).
 
 We aim to make the Google Provider a good steward of Go practices. See https://github.com/golang/go/wiki/CodeReviewComments for common Go mistakes that you should attempt to avoid.
 
 ## Generated Resources
 
-We maintain 2 different versions of the Google Terraform provider; the [`google` provider](https://github.com/hashicorp/terraform-provider-google) and the [`google-beta` provider](https://github.com/hashicorp/terraform-provider-google-beta). The `google` provider supports GA ([general availability](https://cloud.google.com/terms/launch-stages)) features, and `google-beta` supports beta features.
+We maintain 2 different versions of the Google Terraform provider; the [`google` provider](https://github.com/owledge-technology/terraform-provider-google) and the [`google-beta` provider](https://github.com/hashicorp/terraform-provider-google-beta). The `google` provider supports GA ([general availability](https://cloud.google.com/terms/launch-stages)) features, and `google-beta` supports beta features.
 
 We are using code generation tool called [Magic Modules](https://github.com/googleCloudPlatform/magic-modules/) that uses a shared code base to generate both providers. Some Terraform resources are fully generated, whereas some resources are hand written and located in [the third_party/terraform/ folder in magic modules](https://github.com/GoogleCloudPlatform/magic-modules/tree/master/mmv1/third_party/terraform/resources). Generated resources will have a prominent header at the top of the file identifying them. Hand written resources have a .go or .go.erb extension but will eventually be migrated into the code generation tool with the goal of having all resources fully generated.
 
-For more details on Magic Modules please visit [the readme](https://github.com/GoogleCloudPlatform/magic-modules). For feature requests or bugs regarding those resources, please continue to file issues in the [terraform-provider-google issue tracker](https://github.com/hashicorp/terraform-provider-google/issues). PRs changing those resources will not be accepted.
+For more details on Magic Modules please visit [the readme](https://github.com/GoogleCloudPlatform/magic-modules). For feature requests or bugs regarding those resources, please continue to file issues in the [terraform-provider-google issue tracker](https://github.com/owledge-technology/terraform-provider-google/issues). PRs changing those resources will not be accepted.
 
 ## Beta vs GA providers
 
@@ -153,7 +153,7 @@ function tpgpatch1 {
 }
 
 function tpgpatch2 {
-  for patch in $GOPATH/src/github.com/hashicorp/terraform-provider-google*/*.patch; do
+  for patch in $GOPATH/src/github.com/owledge-technology/terraform-provider-google*/*.patch; do
     echo "checking ${patch}"
         if git apply --stat $patch | grep "google/"; then
                 git am -3 -i $patch -p2 --directory=third_party/terraform/resources/ --include="*.go"
